@@ -12,10 +12,10 @@ final class StorageManager {
     static let shared = StorageManager()
     
     private init() {}
-
+    
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "TaskListApp")
+        let container = NSPersistentContainer(name: "DailyDiary")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -36,4 +36,39 @@ final class StorageManager {
             }
         }
     }
+    
+    func createTask(title: String) -> Task {
+        let context = persistentContainer.viewContext
+        let task = Task(context: context)
+        task.title = title
+        saveContext()
+        return task
+    }
+    
+    func fetchTasks() -> [Task]{
+        let context = persistentContainer.viewContext
+        let fetchRequest = Task.fetchRequest()
+        
+        do {
+            let task = try context.fetch(fetchRequest)
+            return task
+        } catch {
+            print(error.localizedDescription)
+            return []
+        }
+    }
+    
+    func updateTask(task: Task, title: String) {
+        task.title = title
+        saveContext()
+    }
+    
+    func deleteTask(index: Int) {
+        let context = persistentContainer.viewContext
+        let tasks = fetchTasks()
+        let task = tasks[index]
+        context.delete(task)
+        saveContext()
+    }
+    
 }
