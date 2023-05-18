@@ -10,10 +10,10 @@
 		2C249FBD2A1633C80022ADB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C249FBC2A1633C80022ADB2 /* AppDelegate.swift */; };
 		2C249FBF2A1633C80022ADB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C249FBE2A1633C80022ADB2 /* SceneDelegate.swift */; };
 		2C249FC12A1633C80022ADB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C249FC02A1633C80022ADB2 /* ViewController.swift */; };
-		2C249FC42A1633C80022ADB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C249FC22A1633C80022ADB2 /* Main.storyboard */; };
 		2C249FC72A1633C80022ADB2 /* DailyDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C249FC52A1633C80022ADB2 /* DailyDiary.xcdatamodeld */; };
 		2C249FC92A1633C80022ADB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C249FC82A1633C80022ADB2 /* Assets.xcassets */; };
 		2C249FCC2A1633C80022ADB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C249FCA2A1633C80022ADB2 /* LaunchScreen.storyboard */; };
+		2C249FD62A1635DD0022ADB2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C249FD52A1635DD0022ADB2 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +21,11 @@
 		2C249FBC2A1633C80022ADB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C249FBE2A1633C80022ADB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C249FC02A1633C80022ADB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C249FC32A1633C80022ADB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C249FC62A1633C80022ADB2 /* DailyDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDiary.xcdatamodel; sourceTree = "<group>"; };
 		2C249FC82A1633C80022ADB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C249FCB2A1633C80022ADB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C249FCD2A1633C80022ADB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C249FD52A1635DD0022ADB2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,56 @@
 		2C249FBB2A1633C80022ADB2 /* DailyDiary */ = {
 			isa = PBXGroup;
 			children = (
-				2C249FBC2A1633C80022ADB2 /* AppDelegate.swift */,
-				2C249FBE2A1633C80022ADB2 /* SceneDelegate.swift */,
-				2C249FC02A1633C80022ADB2 /* ViewController.swift */,
-				2C249FC22A1633C80022ADB2 /* Main.storyboard */,
-				2C249FC82A1633C80022ADB2 /* Assets.xcassets */,
-				2C249FCA2A1633C80022ADB2 /* LaunchScreen.storyboard */,
-				2C249FCD2A1633C80022ADB2 /* Info.plist */,
+				2C249FD32A1634E80022ADB2 /* App */,
+				2C249FD42A1634F30022ADB2 /* ViewControllers */,
+				2C249FD72A1635E10022ADB2 /* Services */,
+				2C249FD92A16367F0022ADB2 /* StoryBoards */,
+				2C249FD82A1635F80022ADB2 /* Resources */,
 				2C249FC52A1633C80022ADB2 /* DailyDiary.xcdatamodeld */,
 			);
 			path = DailyDiary;
+			sourceTree = "<group>";
+		};
+		2C249FD32A1634E80022ADB2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2C249FBC2A1633C80022ADB2 /* AppDelegate.swift */,
+				2C249FBE2A1633C80022ADB2 /* SceneDelegate.swift */,
+				2C249FCD2A1633C80022ADB2 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2C249FD42A1634F30022ADB2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C249FC02A1633C80022ADB2 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C249FD72A1635E10022ADB2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C249FD52A1635DD0022ADB2 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C249FD82A1635F80022ADB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C249FC82A1633C80022ADB2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C249FD92A16367F0022ADB2 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				2C249FCA2A1633C80022ADB2 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +170,6 @@
 			files = (
 				2C249FCC2A1633C80022ADB2 /* LaunchScreen.storyboard in Resources */,
 				2C249FC92A1633C80022ADB2 /* Assets.xcassets in Resources */,
-				2C249FC42A1633C80022ADB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +182,7 @@
 			files = (
 				2C249FC12A1633C80022ADB2 /* ViewController.swift in Sources */,
 				2C249FBD2A1633C80022ADB2 /* AppDelegate.swift in Sources */,
+				2C249FD62A1635DD0022ADB2 /* StorageManager.swift in Sources */,
 				2C249FBF2A1633C80022ADB2 /* SceneDelegate.swift in Sources */,
 				2C249FC72A1633C80022ADB2 /* DailyDiary.xcdatamodeld in Sources */,
 			);
@@ -151,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C249FC22A1633C80022ADB2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C249FC32A1633C80022ADB2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C249FCA2A1633C80022ADB2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,22 +325,24 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 668CVSWCB8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DailyDiary/Info.plist;
+				INFOPLIST_FILE = DailyDiary/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DailyDiary.ndlap.DailyDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,22 +355,24 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 668CVSWCB8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DailyDiary/Info.plist;
+				INFOPLIST_FILE = DailyDiary/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DailyDiary.ndlap.DailyDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
