@@ -38,7 +38,7 @@ final class TaskListViewController: UITableViewController {
         cell.backgroundColor = .black
         cell.contentConfiguration = content
         cell.accessoryType = .detailDisclosureButton
-        cell.tintColor = UIColor.white
+        cell.tintColor = UIColor(named: "buttonGreen")
         return cell
     }
     
@@ -96,7 +96,7 @@ private extension TaskListViewController {
         let cancelAction = UIAlertAction(title: "Cansel", style: .destructive)
         
         saveAction.setValue(UIColor(named: "buttonGreen"), forKey: "titleTextColor")
-        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
+        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")// так цвет более яркий
 
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
@@ -104,7 +104,7 @@ private extension TaskListViewController {
             textField.placeholder = "Task name"
             textField.text = task?.title
         }
-        present(alert, animated: true, completion: nil)
+        present(alert, animated: true)
     }
 
     
